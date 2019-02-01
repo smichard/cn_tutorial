@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: cn-demo-rs
+  labels:
+    app: website
+    tier: frontend
+    version: v1
+spec:
+  replicas: 5
+  minReadySeconds: 10
+  selector:
+    matchLabels: 
+      tier: frontend
+  template:
+    metadata:
+      name: cn-demo-pod
+      labels:
+        app: website
+        tier: frontend
+        version: v1
+    spec:
+      containers:
+        - name: cn-demo
+          image: smichard/cn-app:latest
+          ports:
+            - containerPort: 80
+              protocol: TCP

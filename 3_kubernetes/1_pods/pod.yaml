@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cn-demo-pod
+  labels:
+    app: website
+    tier: frontend
+    version: v1
+spec:
+  containers:
+    - name: cn-demo
+      image: smichard/cn-app:latest
+      ports:
+        - containerPort: 80
+          protocol: TCP
