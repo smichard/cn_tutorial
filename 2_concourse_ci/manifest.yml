@@ -1,8 +1,8 @@
 ---
 applications:
-- name: sensor-cloud
+- name: cncf-demo
   memory: 64M
-  routes:
-  - route: sensor-cloud.cfapps.io
+  instances: 3
+  random-route: true
   buildpack: staticfile_buildpack
-  
+  path: website/

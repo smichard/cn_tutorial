@@ -1,8 +1,0 @@
----
-applications:
-- name: sensor-cloud
-  memory: 64M
-  routes:
-  - route: sensor-cloud.cfapps.io
-  buildpack: staticfile_buildpack
-  
