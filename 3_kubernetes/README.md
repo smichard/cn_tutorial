@@ -49,6 +49,14 @@ kubectl rollout history deployment <deployment_name> --revision=2
 kubectl rollout undo deployment <deployment_name> --to-revision=2
 
 ```
+
+# 3 Deployments
+```
+kubectl apply -f 4_config_map/config_map.yaml
+kubectl get cm
+kubectl describe cm <config_map_name>
+```
+
 ## Author
 
 * **Stephan Michard** - reach out on [Twitter](https://twitter.com/StephanMichard)
